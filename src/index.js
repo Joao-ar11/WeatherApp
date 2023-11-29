@@ -1,3 +1,3 @@
 import weather from './js/weather.js';
 
-weather.getForecast('Recife').then(console.log);
+weather.getWeather('Recife').then(console.log).catch(console.log);

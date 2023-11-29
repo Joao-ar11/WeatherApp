@@ -26,7 +26,18 @@ const weather = (() => {
     };
   }
 
-  async function getForecast(location) {
+  function formatCurrentDay(day) {
+    return {
+      tempCelsius: day.temp_c,
+      tempFahrenheit: day.temp_f,
+      conditionText: day.condition.text,
+      conditionIcon: `https:${day.condition.icon}`,
+      feelsLikeCelsius: day.feelslike_c,
+      feelsLikeFahrenheit: day.feelslike_f,
+    };
+  }
+
+  async function getWeather(location) {
     const data = await fetchForecast(location);
 
     if (data.error) {
@@ -37,14 +48,14 @@ const weather = (() => {
       name: data.location.name,
       region: data.location.region,
       country: data.location.country,
+      currentday: formatCurrentDay(data.current),
+      forecastDays: data.forecast.forecastday.map(formatForecastDay),
     };
-
-    forecast.forecastDays = data.forecast.forecastday.map(formatForecastDay);
 
     return forecast;
   }
 
-  return { getForecast };
+  return { getWeather };
 })();
 
 export default weather;
