@@ -12,7 +12,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "import/extensions": ["error", "always"]
+        "import/extensions": "off"
     },
     "ignorePatterns": ["webpack.*.js"]
 }

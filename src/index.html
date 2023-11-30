@@ -1,10 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module"  src="./index.js" defer></script>
+    <link rel="icon" href="./assets/images/favicon.png" />
+    <script type="module" src="./index.js" defer></script>
     <title>WeatherApp</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="current-container">
+        <p class="location">Location</p>
+        <p class="current-condition-text">cloudy</p>
+        <img src="" class="current-condition-icon" />
+        <p class="current-date">11/11/1111 11:11</p>
+        <p class="current-temperature">29°C</p>
+        <p class="current-max-temperature">Max: 29°C</p>
+        <p class="current-min-temperature">Min: 29°C</p>
+        <button class="change-unit">Change to Fahrenheit</button>
+      </div>
+      <form action="#" class="search-form">
+        <label for="search-input" class="search-label"
+          >Search your location:</label
+        >
+        <input type="text" id="search-input" class="search-input" />
+        <button type="submit" class="search-button">
+          <img src="./assets/images/magnify.svg" alt="Search" />
+        </button>
+      </form>
+      <div class="forecasts-section">
+        <div class="forecast-container">
+          <p class="forecast-condition-text">cloudy</p>
+          <p class="forecast-date">11/11/1111 thursday</p>
+          <p class="forecast-temperature">29°C</p>
+          <img src="" class="forecast-condition-icon" />
+          <p class="forecast-max-temperature">29°C</p>
+          <p class="forecast-min-temperature">29°C</p>
+        </div>
+        <div class="forecast-container">
+          <p class="forecast-condition-text">cloudy</p>
+          <p class="forecast-date">11/11/1111 thursday</p>
+          <p class="forecast-temperature">29°C</p>
+          <img src="" class="forecast-condition-icon" />
+          <p class="forecast-max-temperature">29°C</p>
+          <p class="forecast-min-temperature">29°C</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
