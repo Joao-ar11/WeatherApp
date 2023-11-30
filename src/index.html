@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,8 +15,12 @@
         <img src="" class="current-condition-icon" />
         <p class="current-date">11/11/1111 11:11</p>
         <p class="current-temperature">29°C</p>
-        <p class="current-max-temperature">Max: 29°C</p>
-        <p class="current-min-temperature">Min: 29°C</p>
+        <p class="max-temperature">
+          Max: <span class="current-max-temperature">29°C</span>
+        </p>
+        <p class="min-temperature">
+          Min: <span class="current-min-temperature">29°C</span>
+        </p>
         <button class="change-unit">Change to Fahrenheit</button>
       </div>
       <form action="#" class="search-form">
@@ -31,19 +35,27 @@
       <div class="forecasts-section">
         <div class="forecast-container">
           <p class="forecast-condition-text">cloudy</p>
+          <img src="" class="forecast-condition-icon" />
           <p class="forecast-date">11/11/1111 thursday</p>
           <p class="forecast-temperature">29°C</p>
-          <img src="" class="forecast-condition-icon" />
-          <p class="forecast-max-temperature">29°C</p>
-          <p class="forecast-min-temperature">29°C</p>
+          <p class="max-temperature">
+            Max: <span class="forecast-max-temperature">29°C</span>
+          </p>
+          <p class="min-temperature">
+            Min: <span class="forecast-min-temperature">29°C</span>
+          </p>
         </div>
         <div class="forecast-container">
           <p class="forecast-condition-text">cloudy</p>
+          <img src="" class="forecast-condition-icon" />
           <p class="forecast-date">11/11/1111 thursday</p>
           <p class="forecast-temperature">29°C</p>
-          <img src="" class="forecast-condition-icon" />
-          <p class="forecast-max-temperature">29°C</p>
-          <p class="forecast-min-temperature">29°C</p>
+          <p class="max-temperature">
+            Max: <span class="forecast-max-temperature">29°C</span>
+          </p>
+          <p class="min-temperature">
+            Min: <span class="forecast-min-temperature">29°C</span>
+          </p>
         </div>
       </div>
     </div>

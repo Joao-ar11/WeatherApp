@@ -5,7 +5,7 @@ const Interface = (() => {
   function changeCurrentWeahter(weather) {
     // Location paragraph element
     document.querySelector(".location").textContent =
-      `${weather.location.name}, ${weather.location.region} ` +
+      `${weather.location.name}, ${weather.location.region}/` +
       `${weather.location.country}`;
 
     // Current condition text paragraph element
@@ -36,6 +36,37 @@ const Interface = (() => {
       (unit === "celsius" ? "°C" : "°F");
   }
 
+  function changeForecastWeather(forecastDay, index) {
+    // Forecast condition paragraph element
+    document.querySelectorAll(".forecast-condition-text")[index].textContent =
+      forecastDay.weatherConditionText;
+
+    // Forecast condition image element
+    document.querySelectorAll(".forecast-condition-icon")[index].src =
+      forecastDay.weatherConditionIcon;
+
+    // Forecast date paragraph element
+    document.querySelectorAll(".forecast-date")[index].textContent = new Date(
+      forecastDay.date,
+    ).toLocaleString([], {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    });
+
+    // Forecast average temperature paragraph element
+    document.querySelectorAll(".forecast-temperature")[index].textContent =
+      forecastDay.avgTemp[unit] + (unit === "celsius" ? "°C" : "°F");
+
+    // Forecast max temperature paragraph element
+    document.querySelectorAll(".forecast-max-temperature")[index].textContent =
+      forecastDay.maxTemp[unit] + (unit === "celsius" ? "°C" : "°F");
+
+    // Forecast min temperature paragraph element
+    document.querySelectorAll(".forecast-min-temperature")[index].textContent =
+      forecastDay.minTemp[unit] + (unit === "celsius" ? "°C" : "°F");
+  }
+
   function changeWeather(weather) {
     if (firstTime) {
       firstTime = false;
@@ -43,6 +74,7 @@ const Interface = (() => {
       document.querySelector(".forecasts-section").style.display = "flex";
     }
     changeCurrentWeahter(weather);
+    weather.forecastDays.slice(1).forEach(changeForecastWeather);
   }
 
   return { changeWeather };
