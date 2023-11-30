@@ -77,7 +77,13 @@ const Interface = (() => {
     weather.forecastDays.slice(1).forEach(changeForecastWeather);
   }
 
-  return { changeWeather };
+  function changeUnit(weather) {
+    document.querySelector(".change-unit").textContent = `Change to ${unit}`;
+    unit = unit === "celsius" ? "fahrenheit" : "celsius";
+    changeWeather(weather);
+  }
+
+  return { changeWeather, changeUnit };
 })();
 
 export default Interface;
