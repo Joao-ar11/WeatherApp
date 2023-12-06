@@ -5,7 +5,7 @@ const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector(".search-input");
 const changeUnitButton = document.querySelector(".change-unit");
 
-let weatherObj = null
+let weatherObj = null;
 
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,9 +13,11 @@ searchForm.addEventListener("submit", (e) => {
   Weather.getWeather(inputValue)
     .then((data) => {
       weatherObj = data;
-      Interface.changeWeather(weatherObj)
+      Interface.changeWeather(weatherObj);
     })
     .catch(console.log);
 });
 
-changeUnitButton.addEventListener("click", () => { Interface.changeUnit(weatherObj) })
+changeUnitButton.addEventListener("click", () => {
+  Interface.changeUnit(weatherObj);
+});

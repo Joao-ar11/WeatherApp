@@ -70,7 +70,7 @@ const Interface = (() => {
   function changeWeather(weather) {
     if (firstTime) {
       firstTime = false;
-      document.querySelector(".current-container").style.display = "grid";
+      document.querySelector(".current-container").style.display = "flex";
       document.querySelector(".forecasts-section").style.display = "flex";
     }
     changeCurrentWeahter(weather);

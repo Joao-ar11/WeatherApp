@@ -4,22 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./style.css">
     <script type="module" src="./index.js" defer></script>
     <title>WeatherApp</title>
   </head>
   <body>
     <div class="container">
+      <h1>Weather App</h1>
       <div class="current-container">
-        <p class="location">Location</p>
-        <p class="current-condition-text">cloudy</p>
+        <p class="location"></p>
+        <p class="current-date"></p>
+        <p class="current-condition-text"></p>
         <img src="" class="current-condition-icon" />
-        <p class="current-date">11/11/1111 11:11</p>
-        <p class="current-temperature">29°C</p>
+        <p class="current-temperature"></p>
         <p class="max-temperature">
-          Max: <span class="current-max-temperature">29°C</span>
+          Max: <span class="current-max-temperature"></span>
         </p>
         <p class="min-temperature">
-          Min: <span class="current-min-temperature">29°C</span>
+          Min: <span class="current-min-temperature"></span>
         </p>
         <button class="change-unit">Change to fahrenheit</button>
       </div>
@@ -27,34 +29,36 @@
         <label for="search-input" class="search-label"
           >Search your location:</label
         >
-        <input type="text" id="search-input" class="search-input" />
-        <button type="submit" class="search-button">
-          <img src="./assets/images/magnify.svg" alt="Search" />
-        </button>
+        <div class="input-container">
+          <input type="text" id="search-input" class="search-input" />
+          <button type="submit" class="search-button">
+            <img src="./assets/images/magnify.svg" alt="Search" class="search-icon"/>
+          </button>
+        </div>
       </form>
       <div class="forecasts-section">
         <div class="forecast-container">
-          <p class="forecast-condition-text">cloudy</p>
+          <p class="forecast-date"></p>
+          <p class="forecast-condition-text"></p>
           <img src="" class="forecast-condition-icon" />
-          <p class="forecast-date">11/11/1111 thursday</p>
-          <p class="forecast-temperature">29°C</p>
+          <p class="forecast-temperature"></p>
           <p class="max-temperature">
-            Max: <span class="forecast-max-temperature">29°C</span>
+            Max: <span class="forecast-max-temperature"></span>
           </p>
           <p class="min-temperature">
-            Min: <span class="forecast-min-temperature">29°C</span>
+            Min: <span class="forecast-min-temperature"></span>
           </p>
         </div>
         <div class="forecast-container">
-          <p class="forecast-condition-text">cloudy</p>
+          <p class="forecast-date"></p>
+          <p class="forecast-condition-text"></p>
           <img src="" class="forecast-condition-icon" />
-          <p class="forecast-date">11/11/1111 thursday</p>
-          <p class="forecast-temperature">29°C</p>
+          <p class="forecast-temperature"></p>
           <p class="max-temperature">
-            Max: <span class="forecast-max-temperature">29°C</span>
+            Max: <span class="forecast-max-temperature"></span>
           </p>
           <p class="min-temperature">
-            Min: <span class="forecast-min-temperature">29°C</span>
+            Min: <span class="forecast-min-temperature"></span>
           </p>
         </div>
       </div>
